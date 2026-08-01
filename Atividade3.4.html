@@ -1,0 +1,50 @@
+<!DOCTYPE html> <!-- A VERSÃO DO HTML QUE ESTAMOS USANDO -->
+<!-- VERSÃO 5 DO HTML (MAIS MODERNA) -->
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Atividade4.1.css">
+    <title>Formulário com erros</title>
+
+<body>
+    
+    <h1>Cadastro</h1>
+
+    <form action="processa.php" method="post">
+
+        Nome: <input type="text" name="nome">
+        <br>
+
+        Email: <input type="email" name="email">
+        <br>
+
+        Senha: <input type="password" name="senha">
+        <br>
+
+    <p>Selecione</p>
+
+    <select name="pais">
+        <option>Brasil</option>
+        <option>Estados Unidos</opt>
+    </select>
+
+        <br>
+
+        <input type="radio" name="sexo" value="M"> Masculino
+        <input type="radio" name="sexo" value="F"> Feminino
+        </checkbox>
+
+        <br>
+
+        <textarea rows="3" placeholder="Comentarios"></textarea>
+        
+        <button>Enviar</button>
+
+    </form>
+
+</body>
+
+</head>

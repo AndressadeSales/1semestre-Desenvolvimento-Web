@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+<meta charset="UTF-8">
+<title>Fruit App</title>
+<link rel="stylesheet" href="Atividade8.1.2.css">
+
+</head>
+
+<body>
+
+<header>
+    <h1>🍎 Fruit App</h1>
+</header>
+
+<div class="search-box">
+    <input type="text" id="search" placeholder="Buscar fruta...">
+</div>
+
+<div class="grid" id="grid"></div>
+
+<div class="modal" id="modal" onclick="closeModal()">
+    <div class="modal-content" id="modalContent"></div>
+</div>
+
+<button class="dark-btn" onclick="toggleDark()">🌙</button>
+
+<script>
+const frutas = [
+    {nome:"Maçã", kcal:52, img:"https://images.unsplash.com/photo-1567306226416-28f0efdc88ce"},
+    {nome:"Banana", kcal:89, img:"https://images.unsplash.com/photo-1603833665858-e61d17a86224"},
+    {nome:"Laranja", kcal:47, img:"https://images.unsplash.com/photo-1580052614034-c55d20bfee3b"},
+    {nome:"Morango", kcal:32, img:"https://images.unsplash.com/photo-1464965911861-746a04b4bca6"},
+    {nome:"Abacaxi", kcal:50, img:"https://images.unsplash.com/photo-1502741338009-cac2772e18bc"},
+    {nome:"Melancia", kcal:30, img:"https://images.unsplash.com/photo-1563114773-84221bd62daa"},
+    {nome:"Uva", kcal:69, img:"https://images.unsplash.com/photo-1537640538966-79f369143f8f"},
+    {nome:"Manga", kcal:60, img:"https://images.unsplash.com/photo-1553279768-865429fa0078"},
+    {nome:"Pera", kcal:57, img:"https://images.unsplash.com/photo-1582281298055-e25b84a30b0a"}
+];
+
+function render(list) {
+    const grid = document.getElementById("grid");
+    grid.innerHTML = "";
+
+    list.forEach(f => {
+        const card = document.createElement("div");
+        card.className = "card";
+
+        card.innerHTML = `
+            <img src="${f.img}">
+            <div class="card-info">
+                <h2>${f.nome}</h2>
+                <p>${f.kcal} kcal</p>
+            </div>
+        `;
+
+        card.onclick = () => openModal(f);
+
+        grid.appendChild(card);
+    });
+}
+
+function openModal(f) {
+    document.getElementById("modal").style.display = "flex";
+    document.getElementById("modalContent").innerHTML = `
+        <h2>${f.nome}</h2>
+        <p>${f.kcal} kcal</p>
+    `;
+}
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
+
+document.getElementById("search").addEventListener("input", function () {
+    const value = this.value.toLowerCase();
+    const filtered = frutas.filter(f => f.nome.toLowerCase().includes(value));
+    render(filtered);
+});
+
+/* DARK MODE */
+function toggleDark() {
+    document.body.classList.toggle("dark");
+}
+
+render(frutas);
+</script>
+
+</body>
+</html>

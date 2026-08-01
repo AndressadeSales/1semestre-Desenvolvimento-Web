@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+.minhatabela{
+
+}
+body {
+    background: lightgray; /* Cor de fundo */
+    color: black; /* Cor dos textos */
+    padding: 60px;    /* margem joga do lado de fora e o pedding do lado de dentro */
+    display: flex;/* Como os itens vão aparecer,
+    e libera novas propriedades para a 
+    organização destes itens */
+    flex-direction: column;   /* itens em coluna, linha, etc */
+    align-items: center;     /* Alinhamento dos itens */
+}
+h1 {
+
+    margin: 30px;
+    padding: 30px;
+    font-size: 40px; /* tamanho do texto  */
+    color: black;
+    text-align: center;
+    font-weight: normal;  /* grossura da fonte, bold é negrito */
+    letter-spacing: 2px;
+    line-height: 10px;
+
+}
+table {
+
+    border: 2px, solid black;
+    text-align: center;
+
+}
+tr {
+    padding: 50px;
+    font-size: 30px; /* tamanho do texto  */
+    color: SteelBlue;
+    font-weight: normal;  /* grossura da fonte, bold é negrito */
+
+}
+ol li {
+
+  background: PaleTurquoise;
+  color: RoyalBlue;
+  padding: 10px;
+  margin-left: 20px;
+
+}
+input[type=text],
+input[type=email], 
+input[type=password] {
+
+    width: 100%;
+    padding: 12px;
+    margin: 10px;
+    box-sizing: border-box;
+    border: 2px solid gray;
+    border-radius: 8px;
+    outline: none; 
+
+}
+p {
+
+    padding: 2px;
+    margin: 2px;
+    box-sizing: border-box;
+    border: 2px solid gray;
+    border-radius: 8px;
+
+}
+select {
+
+    width: 100%;
+    padding: 12px;
+    margin: 10px;
+    box-sizing: border-box;
+    border: 2px solid gray;
+    border-radius: 8px;
+
+}
+input[type=radio] {
+
+    padding: 12px;
+    margin: 10px;
+    box-sizing: border-box;
+    border: 2px solid gray;
+    border-radius: 8px;
+    outline: none; 
+
+}
+textarea {
+
+    resize: none;    /* Tamanho/redimencionar */
+    width: 100%;    /* Largura */
+    max-width: 640px;  /* limitar até onde a largura vai ocupar */
+    padding: 16px;
+    border: 1px solid #27272a;  /* especificação da borda */
+    border-radius: 10px;          /* arredondamento da borda */
+    color: black;
+    outline: none;        /* tirar azul de seleção */
+    margin-top: 20px;
+
+}
+button {
+
+    width: 100%;       /* Largura */
+    max-width: 640px;
+    height: ;         /* Altura  */
+    background: gray;
+    color: #141419;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    padding: 15px;
+    cursor: pointer;   /* Para definir o tipo de cursos: seta, mãozinha, etc */
+    margin-top: 10px; 
+
+}

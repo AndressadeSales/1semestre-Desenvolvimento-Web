@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>App de Frutas</title>
+<link rel="stylesheet" href="Atividade8.1.css">
+
+</head>
+
+<body>
+
+<header>
+    <h1>🍓 App de Frutas</h1>
+</header>
+
+<div class="controls">
+    <input type="text" id="search" placeholder="Buscar fruta...">
+    <button onclick="toggleDark()">🌙</button>
+</div>
+
+<main class="grid" id="grid"></main>
+
+<div class="modal" id="modal" onclick="closeModal()">
+    <div class="modal-box" id="modalContent"></div>
+</div>
+
+<script>
+const frutas = [
+    {nome:"Maçã", kcal:52, img:"https://images.unsplash.com/photo-1567306226416-28f0efdc88ce"},
+    {nome:"Banana", kcal:89, img:"https://images.unsplash.com/photo-1603833665858-e61d17a86224"},
+    {nome:"Laranja", kcal:47, img:"https://images.unsplash.com/photo-1580052614034-c55d20bfee3b"},
+    {nome:"Morango", kcal:32, img:"https://images.unsplash.com/photo-1464965911861-746a04b4bca6"},
+    {nome:"Abacaxi", kcal:50, img:"https://images.unsplash.com/photo-1502741338009-cac2772e18bc"},
+    {nome:"Melancia", kcal:30, img:"https://images.unsplash.com/photo-1563114773-84221bd62daa"},
+    {nome:"Uva", kcal:69, img:"https://images.unsplash.com/photo-1537640538966-79f369143f8f"},
+    {nome:"Manga", kcal:60, img:"https://images.unsplash.com/photo-1553279768-865429fa0078"},
+    {nome:"Pera", kcal:57, img:"https://images.unsplash.com/photo-1582281298055-e25b84a30b0a"},
+    {nome:"Kiwi", kcal:61, img:"https://images.unsplash.com/photo-1587393855524-087f83d95bc9"},
+    {nome:"Cereja", kcal:50, img:"https://images.unsplash.com/photo-1497534446932-c925b458314e"},
+    {nome:"Limão", kcal:29, img:"https://images.unsplash.com/photo-1590502593747-42a996133562"},
+    {nome:"Coco", kcal:354, img:"https://images.unsplash.com/photo-1505253213348-cd54c92b37c5"},
+    {nome:"Pêssego", kcal:39, img:"https://images.unsplash.com/photo-1590005354167-6da97870c757"}
+];
+
+let favoritos = JSON.parse(localStorage.getItem("fav")) || [];
+
+function render(lista) {
+    const grid = document.getElementById("grid");
+    grid.innerHTML = "";
+
+    lista.forEach(f => {
+        let fav = favoritos.includes(f.nome);
+
+        let card = document.createElement("div");
+        card.className = "card";
+
+        card.innerHTML = `
+            <div class="fav">${fav ? "⭐" : "☆"}</div>
+            <img src="${f.img}">
+            <div class="info">
+                <h2>${f.nome}</h2>
+                <span>${f.kcal} kcal</span>
+            </div>
+        `;
+
+        card.onclick = () => openModal(f);
+
+        card.querySelector(".fav").onclick = (e) => {
+            e.stopPropagation();
+            toggleFav(f.nome);
+        };
+
+        grid.appendChild(card);
+    });
+}
+
+function toggleFav(nome) {
+    if (favoritos.includes(nome)) {
+        favoritos = favoritos.filter(f => f !== nome);
+    } else {
+        favoritos.push(nome);
+    }
+    localStorage.setItem("fav", JSON.stringify(favoritos));
+    render(frutas);
+}
+
+function openModal(f) {
+    document.getElementById("modal").style.display = "flex";
+    document.getElementById("modalContent").innerHTML = `
+        <h2>${f.nome}</h2>
+        <p>${f.kcal} kcal</p>
+    `;
+}
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
+
+document.getElementById("search").addEventListener("input", function() {
+    let val = this.value.toLowerCase();
+    let filtradas = frutas.filter(f => f.nome.toLowerCase().includes(val));
+    render(filtradas);
+});
+
+function toggleDark() {
+    document.body.classList.toggle("dark");
+    localStorage.setItem("dark", document.body.classList.contains("dark"));
+}
+
+if (localStorage.getItem("dark") === "true") {
+    document.body.classList.add("dark");
+}
+
+render(frutas);
+</script>
+
+</body>
+</html>

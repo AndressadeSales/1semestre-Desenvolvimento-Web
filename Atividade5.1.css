@@ -1,0 +1,101 @@
+html {
+    background-color: Snow;
+}
+
+h1 {
+
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px; /* tamanho do texto  */
+    color: MidnightBlue;
+    text-align: center;
+    font-weight: bold;  /* grossura da fonte, bold é negrito */
+
+}
+
+span {
+    color: red;
+    font-weight: bold;
+}
+
+.span1 {
+    background-color: PowderBlue;
+}
+
+.span2 {
+    background-color: IndianRed;
+}
+
+h2 {
+
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px; 
+    color: RoyalBlue;
+    text-align: left;
+    font-weight: bold;  /* grossura da fonte, bold é negrito */
+
+}
+
+.p1 {
+    background-color: PowderBlue;
+}
+
+.p2 {
+    background-color: IndianRed;
+}
+
+.p3 {
+    color: RebeccaPurple;
+    font-style: italic;
+}
+
+.li1 {
+    background-color: PowderBlue;
+}
+.li2 {
+    background-color: IndianRed;
+}
+.li3 {
+    background-color: SpringGreen;
+}
+
+.li4 {
+    background-color: LemonChiffon;
+}
+
+.li5 {
+    color: RebeccaPurple;
+    font-style: italic;
+}
+
+.li6 {
+    background-color: LemonChiffon;
+}
+
+.titulo {
+    color: MidnightBlue;
+    background-color: LightSeaGreen;
+}
+
+.ana {
+    background-color: PowderBlue;
+}
+
+.nota {
+    color: Green;
+    background-color: SpringGreen;
+}
+
+.bruno {
+    background-color: snow;
+}
+
+.nota2 {
+    color: red;
+    background-color: IndianRed;
+}
+
+.carla {
+    background-color: PowderBlue;
+}

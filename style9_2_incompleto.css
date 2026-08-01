@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f4f6;
+}
+
+.container {
+  padding: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column; /* mobile-first */
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.conteudo {
+  padding: 16px;
+}
+
+h1 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.resumo {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.texto {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}

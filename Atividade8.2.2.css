@@ -1,0 +1,126 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+/*  FUNCIONA
+   O estilo geral da página é aplicado corretamente.
+
+   ✔ Define a fonte
+   ✔ Remove margens padrão
+   ✔ Adiciona espaçamento interno
+   ✔ Altera a cor de fundo
+*/
+
+.titulo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/*  NÃO FUNCIONA
+   No HTML não existe nenhum elemento com a classe "titulo".
+
+   Portanto:
+   - o alinhamento central
+   - a margem inferior
+
+   não são aplicados ao título.
+*/
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 20px;
+}
+
+/*  NÃO FUNCIONA
+   No HTML o contêiner principal usa a classe "grid",
+   e não "container".
+
+   Resultado:
+   o layout flex não é aplicado.
+
+    Além disso:
+   flex-direction: row-reverse inverteria a ordem dos cards,
+   exibindo-os da direita para esquerda.
+*/
+
+
+.card {
+  width: 180px;
+  height: 250px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  padding: 10px;
+  text-align: center;
+}
+
+/*  FUNCIONA
+   A classe "card" existe no HTML e os estilos são aplicados.
+
+   ✔ Define tamanho fixo
+   ✔ Adiciona bordas arredondadas
+   ✔ Aplica sombra
+   ✔ Centraliza os elementos internos
+*/
+
+
+.card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/*  FUNCIONA
+   As imagens dentro dos cards recebem o estilo corretamente.
+
+   ✔ Mantém tamanho padrão
+   ✔ Evita distorção
+   ✔ Arredonda as bordas
+*/
+
+
+.destaque {
+  background-color: #d4edda;
+  font-weight: bold;
+}
+
+/*  NÃO FUNCIONA
+   Nenhum elemento do HTML utiliza a classe "destaque".
+
+   Resultado:
+   esse estilo não aparece na página.
+*/
+
+
+/* 
+   CONCLUSÃO
+*/
+
+/*
+Funcionam corretamente:
+- body
+- .card
+- .card img
+
+Não funcionam:
+- .titulo
+- .container
+- .destaque
+
+O principal problema é que algumas classes definidas no CSS
+não existem no HTML, impedindo que parte do layout seja aplicada.
+*/

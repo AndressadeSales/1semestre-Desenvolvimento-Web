@@ -1,0 +1,86 @@
+.header {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+    color: white;
+    background-color: rgb(42, 41, 56);
+    padding: 20px;
+}
+
+.destaque {
+    color: red;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.paragrafo {
+    text-align: left;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+/* Container específico para os cards */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    flex: 1 1 300px; /* Largura mínima de 300px para os cards */
+    max-width: 350px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow:
+        0px 2px 4px rgba(0, 0, 0, 0.1),
+        0px 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.titulo {
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.texto {
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.botao {
+    display: inline-block;
+    color: white;
+    background-color: blue;
+    border-radius: 4px;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.botao:hover {
+    background-color: darkblue;
+}
+
+.footer {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+    color: white;
+    background-color: rgb(42, 41, 56);
+    padding: 20px;
+    margin-top: 20px;
+}

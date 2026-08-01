@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 30px;
+}
+
+/* Títulos */
+h1 {
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+/* Container cinza igual ao professor */
+
+.container {
+    background-color: #e0e0e0;
+    border: 2px solid #d0d0d0;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+/* Estilo padrão dos blocos verdes */
+
+.grid1 div,
+.grid2 div,
+.grid3 div,
+.grid4 div {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* GRID 1 */
+
+.grid1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* GRID 2 */
+
+.grid2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 10px;
+}
+
+/* GRID 3 */
+
+.grid3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.x {
+    grid-column: 1 / 3;
+}
+
+/* GRID 4 */
+
+.grid4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.grid4 div {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 35px;   /* aumenta o tamanho */
+    border-radius: 6px;
+    font-size: 22px;
+}
+}

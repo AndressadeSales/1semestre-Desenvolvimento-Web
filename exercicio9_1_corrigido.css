@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* TOPO */
+.topo {
+  max-width: 1400px;
+  width: 100%;
+  background: #c4170c;
+  color: white;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.marca {
+  font-size: 38px;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 18px;
+}
+
+/* CONTAINER PRINCIPAL */
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 20px auto;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 0 15px;
+}
+
+/* MANCHETE */
+.manchete {
+  flex: 2 1 600px;
+  background: white;
+  padding: 20px;
+}
+
+.manchete h1 {
+  font-size: 32px;
+  margin: 0 0 15px;
+}
+
+.manchete p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* COLUNAS */
+.coluna-esquerda {
+  flex: 1 1 300px;
+}
+
+.coluna-central {
+  flex: 1 1 250px;
+  background: white;
+  padding: 20px;
+}
+
+.coluna-direita {
+  flex: 1 1 280px;
+}
+
+/* NOTÍCIAS */
+.noticia {
+  background: white;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.noticia h2 {
+  font-size: 22px;
+  margin: 12px 0;
+}
+
+.noticia p {
+  font-size: 16px;
+}
+
+/* LISTA */
+.lista-noticias .item {
+  font-size: 18px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+/* BOX DIREITA */
+.box {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.box h3 {
+  font-size: 22px;
+  margin-top: 0;
+}
+
+.box li,
+.box p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* PUBLICIDADE */
+.publicidade {
+  width: 100%;
+  height: auto;
+  padding: 40px 10px;
+  background: #ddd;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* 📱 RESPONSIVIDADE */
+@media (max-width: 1024px) {
+  .manchete h1 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .menu {
+    flex-direction: column;
+  }
+
+  .menu a {
+    margin: 5px 0;
+  }
+
+  .marca {
+    text-align: center;
+  }
+}
